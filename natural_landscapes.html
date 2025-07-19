@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel - Natural Landscapes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f0f0f0;
+      color: #333;
+    }
+    .navbar {
+      background-color: #003366;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      color: white;
+    }
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    .navbar li {
+      position: relative;
+      margin: 0 15px;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+    .navbar a:hover {
+      background-color: #002244;
+      border-radius: 5px;
+    }
+    .navbar .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #002244;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      min-width: 200px;
+    }
+    .navbar .submenu a {
+      display: block;
+      padding: 10px;
+      color: white;
+      font-size: 0.9rem;
+    }
+    .navbar .submenu a:hover {
+      background-color: #001122;
+    }
+    .navbar li:hover .submenu {
+      display: block;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #0066cc;
+    }
+    .landscape {
+      margin-bottom: 60px;
+    }
+    .landscape h2 {
+      color: #005bb5;
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 12px;
+      margin: 0 auto 10px;
+    }
+
+    .slider img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .slider img.active {
+      opacity: 1;
+    }
+
+    .slider-nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .slider-nav button {
+      width: 14px;
+      height: 14px;
+      margin: 0 5px;
+      border: none;
+      border-radius: 50%;
+      background: #ccc;
+      cursor: pointer;
+    }
+
+    .slider-nav button.active {
+      background: #005bb5;
+    }
+
+    .interactive {
+      margin-top: 16px;
+    }
+
+    .interactive a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #005bb5;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .interactive a:hover {
+      background-color: #004499;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">HOME</a></li>
+    <li>
+      <a href="#">CULTURE</a>
+      <ul class="submenu">
+        <li><a href="traditional_festivals.html">Traditional Festivals</a></li>
+        <li><a href="arts_music.html">Arts & Music</a></li>
+        <li><a href="language_script.html">Language & Script</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">FOOD</a>
+      <ul class="submenu">
+        <li><a href="special_cuisine.html">Special Cuisine</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">TRAVEL</a>
+      <ul class="submenu">
+        <li><a href="historical_sites.html">Historical Sites</a></li>
+        <li><a href="natural_landscapes.html">Natural Landscapes</a></li>
+        <li><a href="modern_cities.html">Modern Cities</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">ABOUT ME</a>
+      <ul class="submenu">
+        <li><a href="my_background.html">My Background</a></li>
+        <li><a href="technical_journey.html">Technical Journey</a></li>
+        <li><a href="future_plans.html">Future Plans</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+  <h1>Explore China's Natural Landscapes</h1>
+
+  <!-- Guilin -->
+  <div class="landscape">
+    <h2>Guilin's Karst Mountains and Li River</h2>
+    <div class="slider" id="guilin-slider">
+      <img src="images/guilin1.jpg" alt="Guilin 1" class="active">
+      <img src="images/guilin2.jpg" alt="Guilin 2">
+      <img src="images/guilin3.jpg" alt="Guilin 3">
+    </div>
+    <div class="slider-nav" id="guilin-nav">
+      <button class="active" onclick="changeSlide('guilin-slider', 0)"></button>
+      <button onclick="changeSlide('guilin-slider', 1)"></button>
+      <button onclick="changeSlide('guilin-slider', 2)"></button>
+    </div>
+    <p><strong>Introduction:</strong> Famous for its stunning karst peaks and serene Li River, Guilin offers one of the most iconic landscapes in China.</p>
+    <p><strong>Experience:</strong> Take a bamboo raft ride or a river cruise to enjoy the breathtaking views.</p>
+  </div>
+
+  <!-- Huangshan -->
+  <div class="landscape">
+    <h2>Huangshan (Yellow Mountain)</h2>
+    <div class="slider" id="huangshan-slider">
+      <img src="images/huangshan1.jpg" alt="Huangshan Scenery 1" class="active">
+      <img src="images/huangshan2.jpg" alt="Huangshan Scenery 2">
+      <img src="images/huangshan3.jpg" alt="Huangshan Scenery 3">
+    </div>
+    <div class="slider-nav" id="huangshan-nav">
+      <button class="active" onclick="changeSlide('huangshan-slider', 0)"></button>
+      <button onclick="changeSlide('huangshan-slider', 1)"></button>
+      <button onclick="changeSlide('huangshan-slider', 2)"></button>
+    </div>
+    <p><strong>Introduction:</strong> Known for its "Four Wonders"—oddly-shaped pine trees, spectacular peaks, sea of clouds, and hot springs—Huangshan is a UNESCO World Heritage Site.</p>
+    <p><strong>Experience:</strong> Hike to the summit to witness sunrises above the sea of clouds.</p>
+  </div>
+
+  <!-- Jiuzhaigou -->
+  <div class="landscape">
+    <h2>Jiuzhaigou Valley</h2>
+    <div class="slider" id="jiuzhaigou-slider">
+      <img src="images/jiuzhaigou1.jpg" alt="Jiuzhaigou Scenery 1" class="active">
+      <img src="images/jiuzhaigou2.jpg" alt="Jiuzhaigou Scenery 2">
+      <img src="images/jiuzhaigou3.jpg" alt="Jiuzhaigou Scenery 3">
+    </div>
+    <div class="slider-nav" id="jiuzhaigou-nav">
+      <button class="active" onclick="changeSlide('jiuzhaigou-slider', 0)"></button>
+      <button onclick="changeSlide('jiuzhaigou-slider', 1)"></button>
+      <button onclick="changeSlide('jiuzhaigou-slider', 2)"></button>
+    </div>
+    <p><strong>Introduction:</strong> A fairyland of turquoise lakes, cascading waterfalls, and snow-capped mountains, Jiuzhaigou is a paradise for nature lovers.</p>
+    <p><strong>Experience:</strong> Stroll along wooden paths to immerse yourself in the natural beauty.</p>
+    <div class="interactive">
+      <a href="https://www.youtube.com/watch?v=ED8PxbJ6n10&list=PLjErQil8g4Tv_9JBbFVlaxm47tLPpabUb&index=3"
+         target="_blank">
+        Watch on YouTube
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- JS Script -->
+<script>
+  function changeSlide(sliderId, index) {
+    const slider = document.getElementById(sliderId);
+    const images = slider.querySelectorAll('img');
+    const navButtons = document.getElementById(sliderId.replace('-slider', '-nav')).querySelectorAll('button');
+
+    images.forEach(img => img.classList.remove('active'));
+    navButtons.forEach(btn => btn.classList.remove('active'));
+
+    if (images[index]) {
+      images[index].classList.add('active');
+      navButtons[index].classList.add('active');
+    }
+  }
+</script>
+
+</body>
+</html>

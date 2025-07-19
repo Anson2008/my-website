@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Journey</title>
+    <style>
+        /* Navigation Bar Styles */
+        .navbar {
+            background-color: #003366;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            color: white;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            padding: 10px 15px;
+        }
+
+        .navbar a:hover {
+            background-color: #002244;
+            border-radius: 5px;
+        }
+
+        .navbar .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #002244;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            min-width: 200px;
+        }
+
+        .navbar .submenu a {
+            display: block;
+            padding: 10px;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .navbar .submenu a:hover {
+            background-color: #001122;
+        }
+
+        .navbar li:hover .submenu {
+            display: block;
+        }
+
+        /* Page Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2c2c2c;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #333;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #003366;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li>
+                <a href="#">CULTURE</a>
+                <ul class="submenu">
+                    <li><a href="traditional_festivals.html">Traditional Festivals</a></li>
+                    <li><a href="arts_music.html">Arts & Music</a></li>
+                    <li><a href="language_script.html">Language & Script</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">FOOD</a>
+                <ul class="submenu">
+                    <li><a href="special_cuisine.html">Special Cuisine</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">TRAVEL</a>
+                <ul class="submenu">
+                    <li><a href="historical_sites.html">Historical Sites</a></li>
+                    <li><a href="natural_landscapes.html">Natural Landscapes</a></li>
+                    <li><a href="modern_cities.html">Modern Cities</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">ABOUT ME</a>
+                <ul class="submenu">
+                    <li><a href="my_background.html">My Background</a></li>
+                    <li><a href="technical_journey.html">Technical Journey</a></li>
+                    <li><a href="future_plans.html">Future Plans</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Content Container -->
+    <div class="container">
+        <h1>My Technical Journey</h1>
+        
+        <div class="section">
+            <h2>What I Learned</h2>
+            <p>Creating this website has been a transformative experience. I needed to learn a variety of web development technologies, including:</p>
+            <ul>
+                <li><strong>HTML:</strong> To structure the website and create a solid foundation.</li>
+                <li><strong>CSS:</strong> To design an attractive and user-friendly interface.</li>
+                <li><strong>JavaScript:</strong> To add interactivity, such as the Zodiac Calculator and Virtual Kitchen game.</li>
+                <li><strong>Responsive Design:</strong> To ensure the site looks good on both desktop and mobile devices.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Challenges I Faced</h2>
+            <p>There were several challenges along the way:</p>
+            <ul>
+                <li><strong>Embedding Videos:</strong> Initially, I struggled to embed videos on the festival pages. After researching online, I learned about the <code>&lt;video&gt;</code> tag and successfully added small, responsive videos.</li>
+                <li><strong>Interactive Features:</strong> Implementing the Zodiac Calculator was a significant challenge. Understanding how to use JavaScript functions for user input required me to read “Eloquent JavaScript” by Marijn Haverbeke, which provided clear examples.</li>
+                <li><strong>Navigation Bar:</strong> Ensuring the navigation bar worked seamlessly across all pages was tricky. I found a solution by creating a shared CSS style and copying the structure to each HTML file.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Solutions I Found</h2>
+            <p>Each challenge was an opportunity to learn and grow. Here are some specific solutions I used:</p>
+            <ul>
+                <li><strong>Video Tutorials:</strong> I followed several YouTube tutorials on HTML and CSS. One particularly helpful video was "Responsive Web Design for Beginners."</li>
+                <li><strong>Debugging Tools:</strong> Using the browser's developer tools allowed me to identify and fix layout issues quickly.</li>
+                <li><strong>Online Resources:</strong> Websites like MDN Web Docs and W3Schools were invaluable for learning new HTML and CSS features.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Key Takeaways</h2>
+            <p>This project taught me the importance of persistence and resourcefulness. Whether it was understanding flexbox layouts or debugging JavaScript code, I learned to break problems into smaller parts and tackle them one at a time.</p>
+        </div>
+    </div>
+</body>
+</html>

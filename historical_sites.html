@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel - Historical Sites</title>
+    <style>
+        /* Navigation Bar Styles */
+        .navbar {
+            background-color: #003366;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            color: white;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            padding: 10px 15px;
+        }
+
+        .navbar a:hover {
+            background-color: #002244;
+            border-radius: 5px;
+        }
+
+        .navbar .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #002244;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            min-width: 200px;
+        }
+
+        .navbar .submenu a {
+            display: block;
+            padding: 10px;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .navbar .submenu a:hover {
+            background-color: #001122;
+        }
+
+        .navbar li:hover .submenu {
+            display: block;
+        }
+
+        /* Page Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2c2c2c;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #333;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #003366;
+        }
+
+        .site {
+            margin-bottom: 40px;
+        }
+
+        .site img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .site h2 {
+            color: #005bb5;
+            margin-bottom: 10px;
+        }
+
+        .site p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li>
+                <a href="#">CULTURE</a>
+                <ul class="submenu">
+                    <li><a href="traditional_festivals.html">Traditional Festivals</a></li>
+                    <li><a href="arts_music.html">Arts & Music</a></li>
+                    <li><a href="language_script.html">Language & Script</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">FOOD</a>
+                <ul class="submenu">
+                    <li><a href="special_cuisine.html">Special Cuisine</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">TRAVEL</a>
+                <ul class="submenu">
+                    <li><a href="historical_sites.html">Historical Sites</a></li>
+                    <li><a href="natural_landscapes.html">Natural Landscapes</a></li>
+                    <li><a href="modern_cities.html">Modern Cities</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">ABOUT ME</a>
+                <ul class="submenu">
+                    <li><a href="my_background.html">My Background</a></li>
+                    <li><a href="technical_journey.html">Technical Journey</a></li>
+                    <li><a href="future_plans.html">Future Plans</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Content Container -->
+    <div class="container">
+        <h1>Explore China's Historical Sites</h1>
+        <div class="site">
+            <h2>The Great Wall of China</h2>
+            <img src="images/great-wall.jpg" alt="The Great Wall">
+            <p><strong>Introduction:</strong> Spanning over 13,000 miles, the Great Wall of China was built to protect against invasions and to unite the country. Construction began during the Qin Dynasty and continued for centuries.</p>
+            <p><strong>Significance:</strong> Symbolizing strength and resilience, the Great Wall is a UNESCO World Heritage Site and one of the New Seven Wonders of the World.</p>
+        </div>
+
+        <div class="site">
+            <h2>The Terracotta Army (兵马俑)</h2>
+            <img src="images/terracotta-army.jpg" alt="Terracotta Army">
+            <p><strong>Introduction:</strong> Discovered in Xi'an, the Terracotta Army consists of thousands of life-sized clay soldiers, horses, and chariots buried with Emperor Qin Shi Huang to protect him in the afterlife.</p>
+            <p><strong>Fun Fact:</strong> Each soldier has unique facial features, and their arrangement reflects military formations of the time.</p>
+        </div>
+
+        <div class="site">
+            <h2>The Forbidden City</h2>
+            <img src="images/forbidden-city.jpg" alt="The Forbidden City">
+            <p><strong>Introduction:</strong> Located in Beijing, the Forbidden City served as the imperial palace for 24 emperors during the Ming and Qing Dynasties. It consists of 980 buildings and is the largest ancient palace complex in the world.</p>
+            <p><strong>Highlights:</strong> The Hall of Supreme Harmony, the emperor's throne, and stunning architectural details like golden roofs and intricate carvings.</p>
+        </div>
+    </div>
+</body>
+</html>
